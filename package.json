@@ -8,9 +8,11 @@
     "start": "NODE_ENV=production bun src/http/server.ts",
     "test": "bun test",
     "generate": "drizzle-kit generate:pg",
-    "migrate": "bun src/db/migrate.ts"
+    "migrate": "bun src/db/migrate.ts",
+    "seed": "bun src/db/seed.ts"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "bun-types": "latest",
     "drizzle-kit": "^0.20.14"
   },
@@ -22,6 +24,7 @@
     "chalk": "^5.3.0",
     "drizzle-orm": "^0.29.4",
     "elysia": "^0.8.17",
+    "pg": "^8.11.3",
     "postgres": "^3.4.3",
     "zod": "^3.22.4"
   }

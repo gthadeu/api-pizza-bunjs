@@ -6,7 +6,7 @@ import { relations } from "drizzle-orm";
 export const restaurants = pgTable("restaurants", {
   id: text("id").$defaultFn(() => createId()).primaryKey(),
   name: text("name").notNull(),
-  description: text("name").notNull(),
+  description: text("description").notNull(),
   managerId: text('manager_id').references(() => users.id, {
     onDelete: 'set null'
   }),
