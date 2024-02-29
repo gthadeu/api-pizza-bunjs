@@ -1,0 +1,27 @@
+{
+  "name": "pizzashop-api",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/http/server.ts",
+    "build": "bun build src/http/server.ts",
+    "start": "NODE_ENV=production bun src/http/server.ts",
+    "test": "bun test",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "bun src/db/migrate.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "drizzle-orm": "^0.29.4",
+    "elysia": "^0.8.17",
+    "postgres": "^3.4.3",
+    "zod": "^3.22.4"
+  }
+}
